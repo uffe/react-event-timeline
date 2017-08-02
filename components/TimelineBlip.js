@@ -13,7 +13,6 @@ class TimelineBlip extends Component {
   }
 
   render() {
-    // eslint-disable-next-line no-unused-vars react/prop-types
     const { createdAt, contentStyle, title, iconStyle, icon, iconColor, ...otherProps } = this.props
     return (
       <div style={{...s.event, marginBottom: 50}}>
@@ -21,7 +20,7 @@ class TimelineBlip extends Component {
           <span style={this.iconStyle(iconStyle)}>{icon}</span>
         </div>
         <div {...otherProps} style={s.blipStyle}>
-          <div>{title}</div>
+          <div>{title}{createdAt}{contentStyle}</div>
         </div>
         <div style={s.eventAfter} />
       </div>
@@ -34,7 +33,9 @@ TimelineBlip.propTypes = {
   icon: PropTypes.node,
   iconColor: PropTypes.string,
   iconStyle: PropTypes.object,
-  style: PropTypes.object
+  style: PropTypes.object,
+  createdAt: PropTypes.node,
+  contentStyle: PropTypes.object
 }
 
 TimelineBlip.defaultProps = {
