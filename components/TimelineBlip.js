@@ -13,7 +13,7 @@ class TimelineBlip extends Component {
   }
 
   render() {
-    const { title, iconStyle, icon, iconColor, ...otherProps } = this.props
+    const { createdAt, contentStyle, title, iconStyle, icon, iconColor, ...otherProps } = this.props
     return (
       <div style={{...s.event, marginBottom: 50}}>
         <div style={this.mergeNotificationStyle(iconColor)}>
