@@ -13,6 +13,7 @@ class TimelineBlip extends Component {
   }
 
   render() {
+    //eslint-disable-next-line no-unused-vars react/prop-types
     const { createdAt, contentStyle, title, iconStyle, icon, iconColor, ...otherProps } = this.props
     return (
       <div style={{...s.event, marginBottom: 50}}>
